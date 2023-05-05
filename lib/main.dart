@@ -7,6 +7,12 @@ class StartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Fresh-Buyer',
+      theme: appTheme(),
+      routes: routes,
+      home: const FRTabbarScreen(),
+    );
   }
 }
