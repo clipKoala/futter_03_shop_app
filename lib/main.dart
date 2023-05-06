@@ -19,7 +19,7 @@ class StartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Fresh-Buyer',
+      title: 'Buyer',
       theme: appTheme(),
       routes: routes,
       home: const FRTabbarScreen(),
