@@ -2,17 +2,27 @@ import 'package:uuid/uuid.dart';
 
 import '../services/validator/name_validator.dart';
 
-class Category {
-  final Uuid _uid = Uuid();
-  String _name, _description, _image;
+enum Category {
+  book(name: 'book'),
+  programming(name: 'programming'),
+  technology(name: 'technology'),
+  flutter(name: 'flutter'),
+  datenbank(name: 'datenbank'),
+  note(name: 'note'),
+  creativity(name: 'creativity'),
+  organisation(name: 'organisation');
 
-  Category(
+  final String name, description, image;
+
+  const Category(
       {required name,
       description = 'No description provided',
       image = 'assets/images/default_category.png'})
-      : _name = name,
-        _description = description,
-        _image = image {
+      : name = name,
+        description = description,
+        image = image;
+
+  void validation() {
     if (name.isEmpty && NameValidator(name).validate() != null) {
       throw Exception('Invalid name');
     }
@@ -23,24 +33,4 @@ class Category {
       throw Exception('Invalid image');
     }
   }
-
-  get image => _image;
-
-  set image(value) {
-    _image = value;
-  }
-
-  get description => _description;
-
-  set description(value) {
-    _description = value;
-  }
-
-  String get name => _name;
-
-  set name(String value) {
-    _name = value;
-  }
-
-  Uuid get uid => _uid;
 }

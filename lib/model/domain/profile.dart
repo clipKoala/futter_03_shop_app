@@ -59,7 +59,7 @@ class Profile {
       _nickname = _firstname + _lastname;
     }
     if (role == null) {
-      _role = Role.guest;
+      _role = Role.user;
     }
   }
 
