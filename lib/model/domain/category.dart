@@ -1,5 +1,3 @@
-import 'package:uuid/uuid.dart';
-
 import '../services/validator/name_validator.dart';
 
 enum Category {

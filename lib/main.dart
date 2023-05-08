@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'presentation/theme/brown_bright_theme.dart';
+
 void main() => runApp(const StartPage());
 
 class StartPage extends StatelessWidget {
@@ -8,8 +10,8 @@ class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(),
-
+      theme: AppTheme(),
+      title: 'Learning App',
     );
   }
 }
